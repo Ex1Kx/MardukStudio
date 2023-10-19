@@ -1,0 +1,102 @@
+// Angular Material Imports //
+@import "~@angular/material/theming";
+@include mat-core();
+
+
+// Color Palettes Declarations //
+$mat-primary-scheme: (
+  100: #fff,
+  500: #6719f7,
+  700: #ffff,
+  contrast: (
+    100: rgba(0, 0, 0, 0.87),
+    500: #fff,
+    700: #ffffff,
+  ),
+);
+$mat-accent-scheme: (
+  100: #ff80ab,
+  500: #6719f7,
+  700: #00f535,
+  contrast: (
+    100: rgba(0, 0, 0, 0.87),
+    500: rgba(0, 0, 0, 0.87),
+    700: #ffffff,
+  ),
+);
+
+
+// Palettes //
+$mat-primary-palette: mat-palette($mat-primary-scheme);
+$mat-accent-palette: mat-palette($mat-accent-scheme);
+$app-light-theme: mat-light-theme($mat-primary-palette, $mat-accent-palette);
+$app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette,);
+
+
+// Light Mode Section //
+.light-mode {
+  @include angular-material-theme($app-light-theme);
+}
+.light-mode .sticky-header{
+  background-color: #fff;
+}
+.light-mode .dropdown-content{
+  background-color: #fff;
+}
+.light-mode .dropdown-content a:hover{
+  background-color: #f1f1f1;
+}
+
+
+// DarkMode Section //
+.dark-mode{
+  @include angular-material-theme($app-dark-theme);
+  background-color: #121212;
+  color: #ffffff;
+}
+
+
+// Home Section //
+.dark-mode .home{
+  background-color: #121212;
+  color: #ffffff;
+}
+.dark-mode .navbarlist{
+  color: #fff;
+}
+.dark-mode .dropdown-content{
+  background-color: #121212;
+}
+.dark-mode .dropdown-content a:hover{
+  background-color: #1e1e1e;
+}
+.dark-mode .sticky-header{
+  background-color: #1e1e1e;
+}
+.dark-mode .heading{
+  color: #fff;
+}
+
+
+// About Us Section //
+.dark-mode .about-text{
+  color: #fff;
+}
+
+
+// TeamCard Section //
+.dark-mode .card{
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+
+// Partners Section //
+.dark-mode .partners-title p{
+  color: #fff;
+}
+
+// Other Dependences //
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import 'node_modules/aos/src/sass/aos.scss'

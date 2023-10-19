@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/de6f71ee-6c07-414a-9937-c5cab2970d08/microsoft.web/sites/subscriptions/de6f71ee-6c07-414a-9937-c5cab2970d08/resourceGroups/TheMarduckProject/providers/Microsoft.Web/sites/themarduckproject",
+    "appService.deploySubpath": "."
+}
